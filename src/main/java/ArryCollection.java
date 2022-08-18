@@ -80,7 +80,7 @@ public class ArryCollection<T> implements Collection<T> {
             return false;
         }
 
-        array = Arrays.copyOf(array, array.length + 1); // увеличивает длинну массива
+        array = Arrays.copyOf(array, array.length + 1); // увеличивает длину массива
         array[array.length - 1] = t;
         this.t=t;
         this.r=array.length - 1;
