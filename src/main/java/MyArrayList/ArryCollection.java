@@ -1,3 +1,5 @@
+package MyArrayList;
+
 import java.util.*;
 
 public class ArryCollection<T> implements Collection<T> {

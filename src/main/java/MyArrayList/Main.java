@@ -1,10 +1,11 @@
+package MyArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class ArrayListCollection {
+public class Main {
     public static void main(String[] args) {
    ArryCollection<String> nnn = new ArryCollection<>(11);
 
