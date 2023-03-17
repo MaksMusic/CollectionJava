@@ -34,4 +34,9 @@ public class Car {
             return ls;
         }
     }
+
+    @Override
+    public String toString() {
+        return year + " " + model + " ls = "+ engine.ls;
+    }
 }
