@@ -1,4 +1,4 @@
-package Map;
+package Map.tasks;
 
 public class Student {
    private int course;

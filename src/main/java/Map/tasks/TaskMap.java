@@ -1,4 +1,4 @@
-package Map;
+package Map.tasks;
 
 import java.util.*;
 
