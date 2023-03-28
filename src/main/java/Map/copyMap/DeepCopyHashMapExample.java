@@ -6,16 +6,16 @@ import java.util.Map;
 public class DeepCopyHashMapExample {
     public static void main(String[] args) {
 
-        // РЎРѕР·РґР°РµРј РёСЃС…РѕРґРЅСѓСЋ РєРѕР»Р»РµРєС†РёСЋ HashMap
+        // Создаем исходную коллекцию HashMap
         HashMap<String, Person> originalMap = new HashMap<>();
-        originalMap.put("person1", new Person("РРІР°РЅ", "РРІР°РЅРѕРІ"));
-        originalMap.put("person2", new Person("РџРµС‚СЂ", "РџРµС‚СЂРѕРІ"));
-        originalMap.put("person3", new Person("РЎРёРґРѕСЂ", "РЎРёРґРѕСЂРѕРІ"));
+        originalMap.put("person1", new Person("Иван", "Иванов"));
+        originalMap.put("person2", new Person("Петр", "Петров"));
+        originalMap.put("person3", new Person("Сидор", "Сидоров"));
 
-        // РЎРѕР·РґР°РµРј РєРѕРїРёСЋ РєРѕР»Р»РµРєС†РёРё HashMap СЃ РїРѕРјРѕС‰СЊСЋ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+        // Создаем копию коллекции HashMap с помощью конструктора
         HashMap<String, Person> copiedMap1 = new HashMap<>(originalMap);
 
-        // РЎРѕР·РґР°РµРј РіР»СѓР±РѕРєСѓСЋ РєРѕРїРёСЋ РєРѕР»Р»РµРєС†РёРё HashMap РІСЂСѓС‡РЅСѓСЋ
+        // Создаем глубокую копию коллекции HashMap вручную
         HashMap<String, Person> copiedMap2 = new HashMap<>();
         for (Map.Entry<String,Person> originalPerson: originalMap.entrySet()) {
             Person copiedPerson = null;
@@ -27,15 +27,15 @@ public class DeepCopyHashMapExample {
             copiedMap2.put(originalPerson.getKey(), copiedPerson);
         }
 
-        // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РєРѕРїРёРё СЃРѕР·РґР°Р»РёСЃСЊ СѓСЃРїРµС€РЅРѕ
-        System.out.println("РСЃС…РѕРґРЅР°СЏ РєРѕР»Р»РµРєС†РёСЏ HashMap: " + originalMap);
-        System.out.println("РљРѕРїРёСЏ HashMap СЃ РїРѕРјРѕС‰СЊСЋ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°: " + copiedMap1);
-        System.out.println("Р“Р»СѓР±РѕРєР°СЏ РєРѕРїРёСЏ HashMap: " + copiedMap2);
+        // Проверяем, что копии создались успешно
+        System.out.println("Исходная коллекция HashMap: " + originalMap);
+        System.out.println("Копия HashMap с помощью конструктора: " + copiedMap1);
+        System.out.println("Глубокая копия HashMap: " + copiedMap2);
     }
 
 
 
-    // РџСЂРёРјРµСЂ РєР»Р°СЃСЃР° Person
+    // Пример класса Person
     static class Person implements Cloneable{
         private String firstName;
         private String lastName;
