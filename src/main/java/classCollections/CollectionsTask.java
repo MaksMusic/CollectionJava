@@ -32,6 +32,7 @@ public class CollectionsTask {
         int max2 = Collections.max(numbers);
         int min = Collections.min(numbers);
         System.out.printf("Max: %d, Min: %d", max2, min); // Max: 10, Min: -5
+        System.out.println();
 
 
         /**  4.	Создать очередь строк и добавить в нее несколько элементов с помощью метода Collections.addAll(). Затем удалить первый элемент с помощью метода remove(). */
