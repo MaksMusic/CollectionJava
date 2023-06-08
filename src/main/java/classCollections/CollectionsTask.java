@@ -120,6 +120,39 @@ public class CollectionsTask {
         System.out.println(syncWords); // [apple, banana, cherry]
 
 
+        /** создаем массив из списка с помощью метода toArray() */
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        Integer[] array = list.toArray(new Integer[list.size()]);
+        System.out.println(Arrays.toString(array));
+        // Теперь переменная array содержит массив элементов списка list.
+
+
+        /**сделать из массиа  лист и вывести его в обратном порядке */
+        String[] arr = {"one", "two", "three", "four", "five"};
+
+        List<String> list11 = Arrays.asList(arr); //получить лист из массива (не изменяемый)
+
+        arr = list11.toArray(new String[list.size()]); //получить массив из листа
+
+        System.out.println(Arrays.toString(arr));
+        System.out.println(list11);
+
+        //получить изменяемый массив из лсита и добавить туда элемент
+        List<String> list1 = new ArrayList(Collections.nCopies(arr.length,null));
+        Collections.copy(list1,list11);
+        list1.add(0,"null");
+        Collections.reverse(list11); //перевернуть лист
+        System.out.println(list1);
+
+
+
+
+
+
 
 
     }
