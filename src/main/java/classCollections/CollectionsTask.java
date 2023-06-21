@@ -141,7 +141,7 @@ public class CollectionsTask {
         System.out.println(Arrays.toString(arr));
         System.out.println(list11);
 
-        //получить изменяемый массив из лсита и добавить туда элемент
+        //получить изменяемый массив из лисита и добавить туда элемент
         List<String> list1 = new ArrayList(Collections.nCopies(arr.length,null));
         Collections.copy(list1,list11);
         list1.add(0,"null");
@@ -149,11 +149,8 @@ public class CollectionsTask {
         System.out.println(list1);
 
 
-
-
-
-
-
-
     }
+
+
+
 }
