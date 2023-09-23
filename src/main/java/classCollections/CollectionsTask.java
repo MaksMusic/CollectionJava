@@ -149,6 +149,7 @@ public class CollectionsTask {
         System.out.println(list1);
 
 
+
     }
 
 
