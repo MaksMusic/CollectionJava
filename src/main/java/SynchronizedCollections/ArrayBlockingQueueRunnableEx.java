@@ -7,7 +7,6 @@ public class ArrayBlockingQueueRunnableEx  {
         ArrayBlockingQueue<Integer> arrayBlockingQueue =
                 new ArrayBlockingQueue<>(5);
 
-
         //Producer
         new Thread(()->{
             int i = 0;
@@ -21,7 +20,6 @@ public class ArrayBlockingQueueRunnableEx  {
                 }
             }
         }).start();
-
 
         //Consumer
         new Thread(()->{
